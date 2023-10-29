@@ -30,6 +30,7 @@ body {
 .body-text {
   font-size: 16px;
   font-weight: 500;
+  padding-top: 15px;
 }
 
 .project-card-text {
