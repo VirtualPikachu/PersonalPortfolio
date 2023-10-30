@@ -15,7 +15,7 @@ window.addEventListener('scroll', function () {
     document.querySelector('.navbar').classList.remove('show');
   }
 
-  if (prevScrollPos <= 0 || currentScrollPos <= 0 || prevScrollPos-currentScrollPos<=0)
+  if (prevScrollPos <= 0 || currentScrollPos <= 0)
   {
     document.querySelector('.navbar').classList.remove('show');
   }
@@ -37,3 +37,13 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+document.getElementById('btn').addEventListener('click', function(e)
+{
+  e.preventDefault();
+  var name = document.getElementsByName("name").value;
+  var email = document.getElementsByName("email").value;
+  var subject = document.getElementsByName("subject").value;
+  var message = document.getElementsByName("message").value;
+  var body = "name: "+name+ "<br/> email: " + email + "<br/> subject" + subject+ "<br/> message" + message;
+  window.location.href = "mailto:lizhiqiang0071@gmail.com" + body;
+})
