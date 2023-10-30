@@ -15,8 +15,7 @@ window.addEventListener('scroll', function () {
     document.querySelector('.navbar').classList.remove('show');
   }
 
-  if (prevScrollPos <= 0 || currentScrollPos <= 0)
-  {
+  if (prevScrollPos <= 0 || currentScrollPos <= 0) {
     document.querySelector('.navbar').classList.remove('show');
   }
 
@@ -37,13 +36,12 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-document.getElementById('btn').addEventListener('click', function(e)
-{
+document.getElementById('btn').addEventListener('click', function (e) {
   e.preventDefault();
-  var name = document.getElementsByName("name").value;
-  var email = document.getElementsByName("email").value;
-  var subject = document.getElementsByName("subject").value;
-  var message = document.getElementsByName("message").value;
-  var body = "name: "+name+ "<br/> email: " + email + "<br/> subject" + subject+ "<br/> message" + message;
-  window.location.href = "mailto:lizhiqiang0071@gmail.com" + body;
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
+  var body = "Hello Zhiqiang,%0D%0A%0D%0A" + message + "%0D%0A%0D%0AYou may contact me at " + email + "%0D%0A%0D%0A%0D%0AThank you,%0D%0A" + name + "%0D%0A%0D%0A";
+  window.location.href = "mailto:lizhiqiang0071@gmail.com?subject=" + subject + "&body=" + body;
 })
