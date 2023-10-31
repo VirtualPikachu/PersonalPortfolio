@@ -21,7 +21,7 @@ body {
 #main-content {
   margin: 225px 425px;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   gap: 96px;
 }
 
@@ -94,29 +94,71 @@ body {
   gap: 34px 16px;
 }
 
-    /* Project Cards */
 
-    .project-card {
-      max-width: calc((100% - 32px) / 3);
-      display: flex;
-      flex-direction: column;
-      gap: 34px;
-    }
+/* Project Cards */
 
-    .project-card-text-container {
-      flex-direction: column;
-      display: flex;
-      gap: 16px
-    }
+.project-card {
+  max-width: calc((100% - 32px) / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
 
-    .project-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-    }
+.project-card-text-container {
+  flex-direction: column;
+  display: flex;
+  gap: 16px
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+}
 
 
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  animation: slide 16s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(0);
+  }
+
+  35% {
+    transform: translateX(-100%);
+  }
+
+  45% {
+    transform: translateX(-100%);
+  }
+
+  60% {
+    transform: translateX(-200%);
+  }
+
+  75% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
 
 
 /* Project Pages */
@@ -159,35 +201,35 @@ div.contactPage {
   margin-top: 25px;
 }
 
-    /* Project Gallery */
+/* Project Gallery */
 
-    #project-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+#project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-    .project-gallery-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 34px 16px;
-    }
+.project-gallery-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px 16px;
+}
 
-    .gallery-image-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+.gallery-image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    .gallery-image-container.half-width {
-      width: calc((100% - 16px) / 2);
-    }
+.gallery-image-container.half-width {
+  width: calc((100% - 16px) / 2);
+}
 
-    .gallery-image {
-      width: 100%;
-      height: auto;
-    }
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
 
 
 /* Extra Extra large devices (large laptops and desktops, 1200px and below) */
@@ -236,6 +278,3 @@ div.contactPage {
     max-width: 100%;
   }
 }
-
-
-

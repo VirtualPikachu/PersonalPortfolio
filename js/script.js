@@ -45,3 +45,7 @@ document.getElementById('btn').addEventListener('click', function (e) {
   var body = "Hello Zhiqiang,%0D%0A%0D%0A" + message + "%0D%0A%0D%0AYou may contact me at " + email + "%0D%0A%0D%0A%0D%0AThank you,%0D%0A" + name + "%0D%0A%0D%0A";
   window.location.href = "mailto:lizhiqiang0071@gmail.com?subject=" + subject + "&body=" + body;
 })
+
+
+
+// Get the video
